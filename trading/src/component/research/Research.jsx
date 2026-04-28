@@ -4,7 +4,6 @@ import "./Research.css";
 export default function Research() {
   const [symbol, setSymbol] = useState("NVDA");
 
-  // Mock data (replace later with API)
   const stock = {
     name: "NVIDIA CORPORATION",
     price: 208.27,
@@ -20,7 +19,7 @@ export default function Research() {
   return (
     <div className="research-page">
 
-      {/* SYMBOL SEARCH */}
+      {}
       <div className="search-box">
         <label>Symbol</label>
         <div className="search-input">
@@ -33,10 +32,10 @@ export default function Research() {
         </div>
       </div>
 
-      {/* MAIN CARD */}
+      {}
       <div className="research-card">
 
-        {/* LEFT SIDE */}
+        {}
         <div className="stock-info">
 
           <h1>{symbol}</h1>
@@ -47,7 +46,7 @@ export default function Research() {
             ₹{stock.price} <span className="green">{stock.change}</span>
           </div>
 
-          {/* FUNDAMENTALS */}
+          {}
           <div className="fundamentals">
             <div>
               <span>EPS</span>
@@ -63,7 +62,7 @@ export default function Research() {
             </div>
           </div>
 
-          {/* STATS */}
+          {}
           <div className="stats">
             <div>
               <span>Day High</span>
@@ -75,7 +74,7 @@ export default function Research() {
             </div>
           </div>
 
-          {/* BUTTONS */}
+          {}
           <div className="actions">
             <button className="trade-btn">TRADE {symbol}</button>
             <button className="info-btn">MORE INFO</button>
@@ -83,7 +82,7 @@ export default function Research() {
 
         </div>
 
-        {/* RIGHT SIDE (Chart Placeholder) */}
+        {}
         <div className="chart-box">
           <div className="chart-placeholder">
             📈 Chart will go here

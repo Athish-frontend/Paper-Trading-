@@ -55,11 +55,11 @@ export default function AuthPage({ onLoginSuccess }) {
 
       setIsLoading(false);
       setIsSuccess(true);
-      
+
       setTimeout(() => {
         setIsSuccess(false);
         if (onLoginSuccess) {
-          // If signup, user needs to login or we just auto-login
+
           onLoginSuccess(type === "signup" ? { name: username, email: email } : data.user);
         }
       }, 1000);
@@ -71,13 +71,13 @@ export default function AuthPage({ onLoginSuccess }) {
 
   return (
     <div className="min-h-screen bg-slate-50 flex items-center justify-center p-4 relative overflow-hidden font-sans">
-      {/* Background blobs for light theme */}
+      {}
       <div className="absolute top-0 -left-4 w-72 h-72 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-blob"></div>
       <div className="absolute top-0 -right-4 w-72 h-72 bg-purple-100 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-blob animation-delay-2000"></div>
       <div className="absolute -bottom-8 left-20 w-72 h-72 bg-emerald-100 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-blob animation-delay-4000"></div>
 
       <div className="w-full max-w-4xl bg-white/70 backdrop-blur-2xl rounded-[2.5rem] shadow-2xl border border-white relative overflow-hidden flex flex-col md:flex-row min-h-[600px]">
-        {/* Decorative Side Panel */}
+        {}
         <div className={`hidden md:flex flex-col justify-center items-center p-12 w-1/2 transition-all duration-700 absolute inset-y-0 ${isActive ? 'translate-x-full bg-blue-600' : 'translate-x-0 bg-blue-600'}`}>
           <div className="relative z-10 text-center text-white space-y-6">
             <div className="w-20 h-20 bg-white/20 rounded-3xl flex items-center justify-center mx-auto backdrop-blur-md shadow-xl">
@@ -98,7 +98,7 @@ export default function AuthPage({ onLoginSuccess }) {
               {isActive ? "Sign In" : "Sign Up"}
             </button>
           </div>
-          {/* Animated pattern inside blue side */}
+          {}
           <div className="absolute inset-0 opacity-10 pointer-events-none overflow-hidden">
              <div className="absolute top-10 right-10 flex flex-wrap gap-4 rotate-45 scale-150">
                 {[...Array(20)].map((_, i) => (
@@ -108,7 +108,7 @@ export default function AuthPage({ onLoginSuccess }) {
           </div>
         </div>
 
-        {/* FORMS */}
+        {}
         <div className={`w-full md:w-1/2 p-8 md:p-16 flex items-center transition-all duration-700 ${isActive ? 'md:translate-x-0' : 'md:translate-x-full'}`}>
           <div className="w-full">
             <form onSubmit={(e) => handleSubmit(e, isActive ? "signup" : "signin")} className="space-y-8 animate-in fade-in duration-700">
@@ -118,7 +118,7 @@ export default function AuthPage({ onLoginSuccess }) {
                   </div>
                   <span className="text-slate-900 font-bold tracking-tighter uppercase text-[10px] tracking-[3px]">PaperTrade</span>
                </div>
-               
+
                <div>
                   <h1 className="text-3xl font-light text-slate-900 tracking-tight mb-2">
                     {isActive ? "Create Account" : "Access Station"}

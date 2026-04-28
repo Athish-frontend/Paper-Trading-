@@ -6,7 +6,6 @@ import './App.css'
 function App() {
   const [user, setUser] = useState(null);
 
-  // Simple handler to simulate login/auth success
   const handleLoginSuccess = (userData) => {
     setUser(userData);
   };

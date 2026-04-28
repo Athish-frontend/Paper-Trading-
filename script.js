@@ -1,15 +1,9 @@
-/* =========================================================
-   Paper Trading — Sliding Auth UI · Script
-   ========================================================= */
-
-// DOM references
 const container = document.getElementById('container');
 const signUpBtn = document.getElementById('signUp');
 const signInBtn = document.getElementById('signIn');
 const mobileSignUp = document.getElementById('mobileSignUp');
 const mobileSignIn = document.getElementById('mobileSignIn');
 
-// ---------- Panel Toggle ----------
 function activateSignUp() {
   container.classList.add('active');
 }
@@ -21,7 +15,6 @@ function activateSignIn() {
 signUpBtn.addEventListener('click', activateSignUp);
 signInBtn.addEventListener('click', activateSignIn);
 
-// Mobile toggle links
 if (mobileSignUp) {
   mobileSignUp.addEventListener('click', (e) => {
     e.preventDefault();
@@ -36,7 +29,6 @@ if (mobileSignIn) {
   });
 }
 
-// ---------- Password Toggle ----------
 document.querySelectorAll('.toggle-pw').forEach((btn) => {
   btn.addEventListener('click', () => {
     const input = btn.parentElement.querySelector('input');
@@ -51,7 +43,6 @@ document.querySelectorAll('.toggle-pw').forEach((btn) => {
   });
 });
 
-// ---------- Form Submit Feedback ----------
 function handleFormSubmit(formId, btnId) {
   const form = document.getElementById(formId);
   const btn = document.getElementById(btnId);
@@ -61,25 +52,21 @@ function handleFormSubmit(formId, btnId) {
   form.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    // Basic HTML5 validation
     if (!form.checkValidity()) {
       form.reportValidity();
       return;
     }
 
-    // Visual feedback — loading state
     const originalHTML = btn.innerHTML;
     btn.disabled = true;
     btn.innerHTML = '<i class="fas fa-circle-notch fa-spin"></i> <span>Please wait…</span>';
     btn.style.opacity = '0.7';
 
-    // Simulate async operation
     setTimeout(() => {
       btn.innerHTML = '<i class="fas fa-check"></i> <span>Success!</span>';
       btn.style.background = 'linear-gradient(135deg, #00b894, #00cec9)';
       btn.style.opacity = '1';
 
-      // Reset after a moment
       setTimeout(() => {
         btn.innerHTML = originalHTML;
         btn.style.background = '';
@@ -93,8 +80,6 @@ function handleFormSubmit(formId, btnId) {
 handleFormSubmit('signInForm', 'submitSignIn');
 handleFormSubmit('signUpForm', 'submitSignUp');
 
-// ---------- Input Micro-animation ----------
-// Add a subtle scale bump when an input-group gains focus
 document.querySelectorAll('.input-group').forEach((group) => {
   const input = group.querySelector('input');
   if (!input) return;
@@ -109,8 +94,6 @@ document.querySelectorAll('.input-group').forEach((group) => {
   });
 });
 
-// ---------- Keyboard Accessibility ----------
-// Allow Enter key on overlay ghost buttons to toggle
 document.querySelectorAll('.btn-ghost').forEach((btn) => {
   btn.addEventListener('keydown', (e) => {
     if (e.key === 'Enter' || e.key === ' ') {

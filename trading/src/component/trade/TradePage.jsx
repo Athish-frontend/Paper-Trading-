@@ -25,7 +25,6 @@ export default function TradePage({ user }) {
   const [activeSubTab, setActiveSubTab] = useState("STOCKS");
   const [tradeHistory, setTradeHistory] = useState([]);
 
-  // eslint-disable-next-line react-hooks/purity
   const optionsData = useMemo(() => [
     { s: -10, itm: true }, { s: -5, itm: true }, { s: 0, itm: false },
     { s: 5, itm: false }, { s: 10, itm: false }, { s: 15, itm: false }
@@ -87,7 +86,7 @@ export default function TradePage({ user }) {
       const data = await response.json();
       setAccount({
         totalAccountValue: data.totalAccountValue,
-        buyingPower: data.cash, // Buying power is cash in this simple sim
+        buyingPower: data.cash, 
         cash: data.cash
       });
     } catch (err) {
@@ -125,7 +124,7 @@ export default function TradePage({ user }) {
       const data = await response.json();
       if (!response.ok) throw new Error(data.detail || "Trade failed");
 
-      alert(data.message); // Simple notification for now
+      alert(data.message); 
       setQuantity("");
       setSymbol("");
       setStockData(null);
@@ -175,7 +174,7 @@ export default function TradePage({ user }) {
 
   return (
     <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
-      {/* HEADER SECTION */}
+      {}
       <div className="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-6">
         <div>
           <h2 className="text-3xl font-light tracking-tight text-slate-900 mb-1">Trade Assets</h2>
@@ -197,7 +196,7 @@ export default function TradePage({ user }) {
         </div>
       </div>
 
-      {/* SUB-MENUBAR */}
+      {}
       <div className="flex gap-8 border-b border-slate-200 mb-8 pb-1">
         {[
           { id: "STOCKS", label: "Stocks" },
@@ -224,7 +223,7 @@ export default function TradePage({ user }) {
 
       {activeSubTab === "STOCKS" ? (
         <div className="grid grid-cols-12 gap-8">
-          {/* LEFT PANEL: ORDER FORM */}
+          {}
           <div className="col-span-12 lg:col-span-7 space-y-8">
             <section className="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm">
               <div className="flex items-center gap-3 mb-8 pb-6 border-b border-slate-100">
@@ -235,7 +234,7 @@ export default function TradePage({ user }) {
               </div>
 
               <div className="space-y-6">
-                {/* SYMBOL SEARCH */}
+                {}
                 <div className="relative group">
                   <label className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-2 block">Stock Symbol</label>
                   <div className="relative">
@@ -249,7 +248,7 @@ export default function TradePage({ user }) {
                       className={`w-full bg-slate-50 border ${error ? 'border-red-300' : 'border-slate-200'} rounded-2xl py-4 pl-12 pr-6 text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-blue-300 focus:ring-4 focus:ring-blue-100 transition-all`}
                     />
 
-                    {/* SEARCH SUGGESTIONS DROPDOWN */}
+                    {}
                     {showSuggestions && suggestions.length > 0 && (
                       <>
                         <div className="fixed inset-0 z-10" onClick={() => setShowSuggestions(false)}></div>
@@ -291,7 +290,7 @@ export default function TradePage({ user }) {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {/* ACTION TOGGLE */}
+                  {}
                   <div>
                     <label className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-2 block">Action</label>
                     <div className="flex bg-slate-50 border border-slate-200 p-1 rounded-2xl h-[56px]">
@@ -310,7 +309,7 @@ export default function TradePage({ user }) {
                     </div>
                   </div>
 
-                  {/* ORDER TYPE */}
+                  {}
                   <div>
                     <label className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-2 block">Order Type</label>
                     <div className="flex bg-slate-50 border border-slate-200 p-1 rounded-2xl h-[56px]">
@@ -331,7 +330,7 @@ export default function TradePage({ user }) {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {/* QUANTITY */}
+                  {}
                   <div>
                     <label className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-2 block">Quantity (Shares)</label>
                     <input
@@ -343,7 +342,7 @@ export default function TradePage({ user }) {
                     />
                   </div>
 
-                  {/* LIMIT PRICE */}
+                  {}
                   {orderType === "LIMIT" && (
                     <div className="animate-in fade-in zoom-in-95 duration-300">
                       <label className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-2 block">Limit Price ($)</label>
@@ -358,7 +357,7 @@ export default function TradePage({ user }) {
                   )}
                 </div>
 
-                {/* ACTION BUTTONS */}
+                {}
                 <div className="flex gap-4 pt-6">
                   <button
                     onClick={() => { setQuantity(""); setPrice(""); setSymbol(""); }}
@@ -378,7 +377,7 @@ export default function TradePage({ user }) {
               </div>
             </section>
 
-            {/* HELP CARD */}
+            {}
             <div className="bg-blue-50 border border-blue-100 rounded-3xl p-6 flex gap-5 items-start shadow-sm">
               <Info className="text-blue-500 shrink-0 mt-1" size={20} />
               <div>
@@ -390,7 +389,7 @@ export default function TradePage({ user }) {
             </div>
           </div>
 
-          {/* RIGHT PANEL: SUMMARY & DATA */}
+          {}
           <div className="col-span-12 lg:col-span-5 space-y-8">
             <section className="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm overflow-hidden relative">
               <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 rounded-full blur-[60px] pointer-events-none" />
@@ -445,7 +444,7 @@ export default function TradePage({ user }) {
               )}
             </section>
 
-            {/* WATCHLIST PREVIEW (Mini) */}
+            {}
             <section className="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm">
               <h3 className="text-xs font-bold text-slate-400 uppercase tracking-[0.2em] mb-6">Market Favorites</h3>
               <div className="space-y-4">
@@ -480,7 +479,7 @@ export default function TradePage({ user }) {
             <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/5 rounded-full blur-[100px] -mr-32 -mt-32" />
 
             <div className="grid grid-cols-12 gap-12">
-              {/* LEFT: INFO & STATS */}
+              {}
               <div className="col-span-12 lg:col-span-7 space-y-10">
                 <div>
                   <label className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.2em] mb-4 block">Asset Research</label>
@@ -495,7 +494,7 @@ export default function TradePage({ user }) {
                       className="w-full bg-slate-50 border border-slate-200 rounded-2xl py-5 pl-14 pr-8 text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-blue-300 focus:ring-4 focus:ring-blue-100 transition-all font-medium"
                     />
 
-                    {/* RECOMMENDATIONS */}
+                    {}
                     {showSuggestions && suggestions.length > 0 && (
                       <>
                         <div className="fixed inset-0 z-10" onClick={() => setShowSuggestions(false)}></div>
@@ -609,7 +608,7 @@ export default function TradePage({ user }) {
                 )}
               </div>
 
-              {/* RIGHT: CHART */}
+              {}
               <div className="col-span-12 lg:col-span-5 min-h-[600px] bg-slate-50 rounded-[3rem] border border-slate-100 overflow-hidden relative shadow-inner">
                 {stockData ? (
                   <div className="h-full animate-in zoom-in-95 duration-1000">
@@ -684,10 +683,10 @@ export default function TradePage({ user }) {
         </div>
       ) : activeSubTab === "OPTIONS" ? (
         <div className="animate-in fade-in slide-in-from-bottom-4 duration-500 space-y-8">
-          {/* SEARCH & CHART SECTION */}
+          {}
           <section className="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm">
             <div className="grid grid-cols-12 gap-8">
-              {/* LEFT: INFO & SEARCH */}
+              {}
               <div className="col-span-12 lg:col-span-4 space-y-6">
                 <div>
                   <label className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-2 block">Symbol Search</label>
@@ -702,7 +701,7 @@ export default function TradePage({ user }) {
                       className="w-full bg-slate-50 border border-slate-200 rounded-2xl py-4 pl-12 pr-6 text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-blue-300 focus:ring-4 focus:ring-blue-100 transition-all"
                     />
 
-                    {/* SEARCH SUGGESTIONS DROPDOWN */}
+                    {}
                     {showSuggestions && suggestions.length > 0 && (
                       <>
                         <div className="fixed inset-0 z-10" onClick={() => setShowSuggestions(false)}></div>
@@ -773,7 +772,7 @@ export default function TradePage({ user }) {
                 )}
               </div>
 
-              {/* RIGHT: CHART */}
+              {}
               <div className="col-span-12 lg:col-span-8 min-h-[400px] bg-slate-50 rounded-3xl border border-slate-100 overflow-hidden relative">
                 {stockData ? (
                   <TradingViewChart symbol={stockData.symbol} />
@@ -786,7 +785,7 @@ export default function TradePage({ user }) {
             </div>
           </section>
 
-          {/* OPTIONS CHAIN SECTION */}
+          {}
           {stockData && (
             <section className="bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden animate-in fade-in slide-in-from-bottom-8 duration-700">
               <div className="px-8 py-6 border-b border-slate-100 flex justify-between items-center bg-slate-50/50">
@@ -831,7 +830,7 @@ export default function TradePage({ user }) {
                       const strikePrice = Math.round((stockData?.price || 0) + row.s);
                       const isCallITM = row.s <= 0;
                       const isPutITM = row.s >= 0;
-                      
+
                       return (
                         <tr key={i} className="text-[11px] hover:bg-slate-50/50 transition-colors">
                           <td className={`py-4 px-2 font-bold ${isCallITM ? 'bg-blue-50/30' : ''}`}>{ row.callLast }</td>
@@ -840,9 +839,9 @@ export default function TradePage({ user }) {
                           <td className={`py-4 px-2 ${isCallITM ? 'bg-blue-50/30' : ''}`}>{ (5.2 - row.s * 0.4).toFixed(2) }</td>
                           <td className={`py-4 px-2 text-slate-400 ${isCallITM ? 'bg-blue-50/30' : ''}`}>{ row.callVol }</td>
                           <td className={`py-4 px-2 text-slate-400 border-r border-slate-100 ${isCallITM ? 'bg-blue-50/30' : ''}`}>{ row.callOI }</td>
-                          
+
                           <td className="py-4 px-4 text-center font-bold text-slate-900 bg-slate-50/50 border-x border-slate-100">{strikePrice.toFixed(2)}</td>
-                          
+
                           <td className={`py-4 px-2 font-bold border-l border-slate-100 ${isPutITM ? 'bg-red-50/30' : ''}`}>{ row.putLast }</td>
                           <td className={`py-4 px-2 font-medium ${isPutITM ? 'bg-red-50/30' : ''} ${row.putChgColor}`}>{row.putChg}</td>
                           <td className={`py-4 px-2 ${isPutITM ? 'bg-red-50/30' : ''}`}>{ (4.8 + row.s * 0.4).toFixed(2) }</td>
