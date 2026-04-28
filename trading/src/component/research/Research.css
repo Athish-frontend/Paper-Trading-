@@ -1,0 +1,113 @@
+.research-page {
+  background: #2f3b55;
+  min-height: 100vh;
+  padding: 20px;
+  color: white;
+}
+
+/* SEARCH */
+.search-box {
+  margin-bottom: 20px;
+}
+
+.search-input {
+  display: flex;
+  align-items: center;
+  background: #e5e7eb;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.search-input input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+/* CARD */
+.research-card {
+  background: #f5f5f5;
+  color: black;
+  border-radius: 8px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* LEFT */
+.stock-info h1 {
+  font-size: 40px;
+}
+
+.company {
+  font-size: 14px;
+  color: gray;
+}
+
+.market {
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 30px;
+  margin: 10px 0;
+}
+
+.green {
+  color: green;
+}
+
+/* FUNDAMENTALS */
+.fundamentals {
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.stats {
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+/* BUTTONS */
+.actions {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.trade-btn {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #3b82f6;
+  background: transparent;
+  color: #3b82f6;
+}
+
+.info-btn {
+  flex: 1;
+  padding: 10px;
+  background: #3b82f6;
+  color: white;
+  border: none;
+}
+
+/* RIGHT */
+.chart-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chart-placeholder {
+  width: 100%;
+  height: 300px;
+  background: linear-gradient(to top, #d1d5db, #9ca3af);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

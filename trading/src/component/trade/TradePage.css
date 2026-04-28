@@ -1,0 +1,118 @@
+.trade-page {
+  background: #0f172a;
+  min-height: 100vh;
+  color: white;
+  padding: 20px;
+}
+
+/* HEADER */
+.trade-header {
+  margin-bottom: 20px;
+}
+
+.account-stats {
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.market-open {
+  color: #00ff88;
+}
+
+/* LAYOUT */
+.trade-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+/* FORM */
+.trade-form {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.field {
+  margin-bottom: 15px;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background: #0f172a;
+  color: white;
+}
+
+/* TOGGLE */
+.toggle {
+  display: flex;
+  gap: 10px;
+}
+
+.toggle button {
+  flex: 1;
+  padding: 10px;
+  background: #0f172a;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.toggle .active {
+  background: #6366f1;
+}
+
+.buy.active {
+  background: #16a34a;
+}
+
+.sell.active {
+  background: #dc2626;
+}
+
+/* ACTION BUTTONS */
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.clear-btn {
+  flex: 1;
+  background: transparent;
+  border: 1px solid #555;
+  color: white;
+}
+
+.preview-btn {
+  flex: 1;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  border: none;
+  color: white;
+}
+
+/* SUMMARY */
+.order-summary {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.empty {
+  opacity: 0.6;
+}
+
+.summary-box p {
+  margin: 5px 0;
+}

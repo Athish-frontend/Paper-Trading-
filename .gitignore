@@ -1,0 +1,33 @@
+# Node
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+
+# Environment Variables
+.env
+.env.*
+
+# Logs
+*.log
+logs/
+
+# Editor
+.vscode/
+.idea/
+.DS_Store
+
+# Temporary files
+*.txt
+*.tmp
+lint_output.txt
+trade_lint.txt
+trade_lint_final.txt
