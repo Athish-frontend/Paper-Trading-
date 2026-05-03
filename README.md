@@ -63,10 +63,9 @@
 
 ## Overall Learning 
 
-> _This is a placeholder. Replace the text below with your personal learning summary._
-During this course, I learned the fundamentals of web development and project design.
-I gained hands-on experience with HTML, CSS, JavaScript and strengthened my skills in 
-problem-solving, teamwork, documentation, and delivering real-world project solutions.
+During this program, I developed a strong foundation in full-stack web development, working with HTML, CSS, JavaScript, Python, and React.js to build scalable applications. I gained hands-on experience in integrating real-time APIs such as OpenWeather API and Finnhub API, handling dynamic data rendering and high-frequency API requests.
+
+Through project-based learning, I strengthened my problem-solving and debugging skills while designing responsive user interfaces and implementing backend logic. I also improved my ability to structure applications, document workflows, and collaborate effectively to deliver complete, real-world solutions.
 
 
 <h2 style="color:#333;"> Projects Completed </h2>
@@ -79,7 +78,7 @@ problem-solving, teamwork, documentation, and delivering real-world project solu
 </div>
 
 <!-- Project 1 -->
-<h3 id="project1">Project 1: <!-- Add Project Title --></h3>
+<h3 id="project1">Project 1: Web-Based Paper Trading System for Stock Market Learning</h3>
 <p>
 Recent digitization has made financial markets more accessible through online trading platforms. However, many beginners still lack the practical knowledge required for effective trading. While theoretical resources are widely available, applying that knowledge in real scenarios remains challenging.
 
@@ -88,7 +87,7 @@ Financial markets are inherently complex, involving constant price fluctuations,
 There is also a gap between education and practice. Learning materials focus on concepts and strategies but rarely provide hands-on decision-making experience. Additionally, existing platforms either overwhelm users with complexity or oversimplify trading, limiting effective learning.
 </p>
 <p>
-  <a href="https://github.com/Athish-frontend/Paper-Trading-" target="_blank"><strong>→ View Full Project Report</strong></a>
+  <a href="https://github.com/Athish-frontend/Paper-Trading-/blob/main/Paper%20Trading%20System(Athish%20A%20-%20G30%20FSD).pdf" target="_blank"><strong>→ View Full Project Report</strong></a>
 </p>
 
 
@@ -97,7 +96,7 @@ There is also a gap between education and practice. Learning materials focus on 
 
 ## **References**
 
-- [Wikipedia](https://wikipedia.com)
+- [Investopedia](https://www.investopedia.com/simulator/)
 <!--you can add refrences over here in same syntax as above -->
 ---
 
@@ -105,8 +104,9 @@ There is also a gap between education and practice. Learning materials focus on 
 ## **Learnings from LST and SST**
 
 <!-- add your experiences over here -->
-> _This is a placeholder. Replace the text below with your personal learning from LST and SST sessions summary._
-LST and SST sessions helped me....
+LST (Life Skills Training) and SST (Soft Skills Training) sessions enhanced my professional and interpersonal competencies alongside technical learning. I developed effective communication, teamwork, and presentation skills, enabling me to clearly articulate ideas and collaborate in group projects.
+
+These sessions also strengthened my problem-solving approach, time management, and adaptability in structured and real-world scenarios. Additionally, I gained confidence in participating in discussions, handling feedback, and approaching challenges with a solution-oriented mindset, which complemented my full-stack development training.
 ---
 
 ## **Community Services**
