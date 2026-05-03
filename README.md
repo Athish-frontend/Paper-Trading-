@@ -22,7 +22,7 @@
     <p><strong>Email ID:</strong> 23cse024@act.edu.in </p>
     <p><strong>College Name:</strong> Agni College of Technology</p>
     <p><strong>Branch/Specialization :</strong> BE Computer Science and Engineering </p>
-    <p><strong>College ID:</strong> 312823104026 </p>
+    <p><strong>College ID:</strong> 23cse024 </p>
 </div>
 
 <hr style="border: 0; border-top: 1px solid #ccc; width: 80%;" />
